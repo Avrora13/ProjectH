@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     public float Speed = 0.3f;
     public float JumpForce = 1f;
+    public Player player;
 
     public Vector3 mousePosition;
 

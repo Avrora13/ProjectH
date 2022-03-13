@@ -10,6 +10,6 @@ public class Sun : MonoBehaviour
     private void Update()
     {
         x += speed * Time.deltaTime;
-        this.transform.rotation = Quaternion.Euler(x, x, x);
+        this.transform.rotation = Quaternion.Euler(x, 0, 0);
     }
 }

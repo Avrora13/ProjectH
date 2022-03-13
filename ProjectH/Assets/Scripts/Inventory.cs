@@ -1,10 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
     public GameObject inventory;
+    public Slider hpBar;
+    public Slider hungerBar;
+    public Item[] items;
+    public GameObject itemInInv;
 
     private void Update()
     {
@@ -21,5 +26,6 @@ public class Inventory : MonoBehaviour
                 Cursor.visible = true;
             }
         }
+
     }
 }

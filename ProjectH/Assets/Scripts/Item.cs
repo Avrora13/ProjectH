@@ -10,10 +10,14 @@ public class Item : ScriptableObject
     public Sprite spriteItem;
     public int cost;
     public typeItem Type;
+    [TextArea(2, 8)]
+    public string description;
     public enum typeItem
     {
         Weapon,
         Food,
         Heal
     }
+    [HideInInspector]
+    public float regnHug;
 }

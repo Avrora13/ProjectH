@@ -16,4 +16,6 @@ MonoBehaviour:
   nameItem: 
   spriteItem: {fileID: 0}
   cost: 0
-  Type: 2
+  Type: 1
+  description: 
+  regnHug: 100
