@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: Item
   m_EditorClassIdentifier: 
   id: 0
-  nameItem: 
+  nameItem: Apple
   spriteItem: {fileID: 0}
-  cost: 0
+  cost: 50
+  count: 1
   Type: 1
-  description: 
+  description: "\u0415\u0431\u0430\u043D\u043D\u043E\u0435 \u044F\u0431\u043B\u043E\u043A\u043E."
   regnHug: 100

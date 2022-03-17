@@ -9,6 +9,8 @@ public class Item : ScriptableObject
     public string nameItem;
     public Sprite spriteItem;
     public int cost;
+    [Min(0)]
+    public int count;
     public typeItem Type;
     [TextArea(2, 8)]
     public string description;

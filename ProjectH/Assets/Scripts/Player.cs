@@ -16,5 +16,9 @@ public class Player : MonoBehaviour
         inventory.hpBar.value = (hp / 100);
         hunger -= Time.deltaTime * hungerSpeed;
         inventory.hungerBar.value = (hunger / 100);
+        if (hunger > 100)
+        {
+            hunger = 100;
+        }
     }
 }
