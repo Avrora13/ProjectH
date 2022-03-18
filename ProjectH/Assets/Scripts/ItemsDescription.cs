@@ -17,6 +17,17 @@ public class ItemsDescription : MonoBehaviour
         {
             Eat();
         }
+        item.count--;
+        for (int i = 0;i < player.inventory.items.Count; i++)
+        {
+            if(player.inventory.items[i].id == item.id)
+            {
+                if(player.inventory.items[i].count == 0)
+                {
+                    player.inventory.items.RemoveAt(i);
+                }
+            }
+        }
     }
 
     private void Eat()

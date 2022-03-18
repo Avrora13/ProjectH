@@ -16,7 +16,7 @@ MonoBehaviour:
   nameItem: Apple
   spriteItem: {fileID: 0}
   cost: 50
-  count: 1
+  count: 0
   Type: 1
   description: "\u0415\u0431\u0430\u043D\u043D\u043E\u0435 \u044F\u0431\u043B\u043E\u043A\u043E."
   regnHug: 100

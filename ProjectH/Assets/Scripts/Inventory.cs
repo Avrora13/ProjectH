@@ -8,7 +8,7 @@ public class Inventory : MonoBehaviour
     public GameObject inventory;
     public Slider hpBar;
     public Slider hungerBar;
-    public Item[] items;
+    public List<Item> items;
     public GameObject itemInInv;
 
     private void Update()
