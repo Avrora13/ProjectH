@@ -10,6 +10,8 @@ public class ItemsDescription : MonoBehaviour
     public Text costItem;
     public Item item;
     public Player player;
+    public GameObject playerObject;
+    public GameObject DropObject;
 
     public void Use()
     {
@@ -23,6 +25,24 @@ public class ItemsDescription : MonoBehaviour
             if(player.inventory.items[i].id == item.id)
             {
                 if(player.inventory.items[i].count == 0)
+                {
+                    player.inventory.items.RemoveAt(i);
+                }
+            }
+        }
+    }
+
+    public void DropItem()
+    {
+        GameObject NewObject = Instantiate<GameObject>(DropObject, new Vector3(playerObject.gameObject.transform.position.x + 5, playerObject.gameObject.transform.position.y, playerObject.gameObject.transform.position.z), Quaternion.identity) as GameObject;
+        NewObject.GetComponent<ItemTake>().item = item;
+        NewObject.SetActive(true);
+        item.count--;
+        for (int i = 0; i < player.inventory.items.Count; i++)
+        {
+            if (player.inventory.items[i].id == item.id)
+            {
+                if (player.inventory.items[i].count == 0)
                 {
                     player.inventory.items.RemoveAt(i);
                 }
