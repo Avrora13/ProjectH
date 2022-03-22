@@ -10,6 +10,7 @@ public class Inventory : MonoBehaviour
     public Slider hungerBar;
     public List<Item> items;
     public GameObject itemInInv;
+    public Text nameWeapon;
 
     private void Update()
     {

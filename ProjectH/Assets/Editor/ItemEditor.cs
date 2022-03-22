@@ -9,12 +9,14 @@ public class ItemEditor : Editor
 	Item subject;
 
 	SerializedProperty regenerationHunger;
+	SerializedProperty damage;
 
-    private void OnEnable()
+	private void OnEnable()
     {
 		subject = target as Item;
 
 		regenerationHunger = serializedObject.FindProperty("regnHug");
+		damage = serializedObject.FindProperty("damage");
 
 	}
 
@@ -26,6 +28,12 @@ public class ItemEditor : Editor
 		{
 			//Вывод в редактор слайдера
 			EditorGUILayout.PropertyField(regenerationHunger);
+
+		}
+		if (subject.Type == Item.typeItem.Weapon)
+		{
+			//Вывод в редактор слайдера
+			EditorGUILayout.PropertyField(damage);
 
 		}
 		serializedObject.ApplyModifiedProperties();

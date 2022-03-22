@@ -10,6 +10,8 @@ public class Player : MonoBehaviour
     public float hunger;
     public float hungerSpeed;
     public Inventory inventory;
+    public Item Weapon;
+    public GameObject WeaponObj;
 
     public void FixedUpdate()
     {
@@ -19,6 +21,10 @@ public class Player : MonoBehaviour
         if (hunger > 100)
         {
             hunger = 100;
+        }
+        if (Input.GetKey(KeyCode.Mouse0))
+        {
+            WeaponObj.GetComponent<Animator>().Play("Attack");
         }
     }
 }

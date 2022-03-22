@@ -22,4 +22,6 @@ public class Item : ScriptableObject
     }
     [HideInInspector]
     public float regnHug;
+    [HideInInspector]
+    public float damage;
 }
